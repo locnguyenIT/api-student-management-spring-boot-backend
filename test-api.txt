@@ -1,0 +1,99 @@
+Use Postman to test API
+=============STUDENT=======================
+getAllStudent (GET): http://localhost:8080/api/spring-boot/student
+
+getOneStudent (GET): http://localhost:8080/api/spring-boot/student/get/7
+
+getStudentInWhichFaculty (GET): http://localhost:8080/api/spring-boot/student/get/facultyId/2
+
+addStudent (POST): http://localhost:8080/api/spring-boot/student/add/classroomId/3
+    {
+        "name": "Java",
+        "email": "java.developer@gmail.com",
+        "address": "Khanh Hoa",
+        "dob": "1999-09-28"
+    }
+
+deleteStudent (DELETE): http://localhost:8080/api/spring-boot/student/delete/7
+
+updateStudent (PUT): 
+UPDATE ALL 	    http://localhost:8080/api/spring-boot/student/update/3?name=spring&email=spring@gmail.com&classroomId=4
+UPDATE NAME	    http://localhost:8080/api/spring-boot/student/update/3?name=spring
+UPDATE EMAIL	    http://localhost:8080/api/spring-boot/student/update/3?email=spring@gmail.com
+UPDATE CLASSROOMID  http://localhost:8080/api/spring-boot/student/update/3?classroomId=4
+
+===============CLASSROOM=================
+getAllClassroom (GET): http://localhost:8080/api/spring-boot/classroom
+
+getOneClassroom (GET): http://localhost:8080/api/spring-boot/classroom/get/2
+
+addClassroom (POST): http://localhost:8080/api/spring-boot/classroom/add/facultyId/3
+    {
+        "name": "DEL1175"
+    }
+
+deleteClassroom (DELETE): http://localhost:8080/api/spring-boot/classroom/delete/4
+
+updateClassroom (PUT): 
+UPDATE ALL: 	  http://localhost:8080/api/spring-boot/classroom/update/1?name=DCT1170&facultyId=2
+UPDATE NAME:	  http://localhost:8080/api/spring-boot/classroom/update/1?name=DCT1171
+UPDATE FACULTYID: http://localhost:8080/api/spring-boot/classroom/update/1?facultyId=1
+
+===============FACULTY=====================
+getAllFaculty (GET): http://localhost:8080/api/spring-boot/faculty
+
+getOneFaculty (GET): http://localhost:8080/api/spring-boot/faculty/get/3
+
+addFaculty (POST): http://localhost:8080/api/spring-boot/faculty/add
+    {
+        "name": "Electronic"
+    }
+deleteFaculty (DELETE): http://localhost:8080/api/spring-boot/faculty/delete/4
+
+updateFaculty (PUT): http://localhost:8080/api/spring-boot/faculty/update/3?name=English
+
+===============COURSE=====================
+getAllCourse (GET): http://localhost:8080/api/spring-boot/course
+
+getOneCourse (GET): http://localhost:8080/api/spring-boot/course/get/6
+
+addCourse (POST): http://localhost:8080/api/spring-boot/course/add/facultyId/2
+    {
+        "name": "Ke hoach phat trien"
+    }
+deleteCourse (DELETE): http://localhost:8080/api/spring-boot/course/delete/1
+
+updateCourse (PUT): 
+UPDATE ALL:       http://localhost:8080/api/spring-boot/course/update/4?name=Xac xuat&facultyId=3
+UPDATE NAME:      http://localhost:8080/api/spring-boot/course/update/4?name=Xac xuat
+UPDATE FACULTYID: http://localhost:8080/api/spring-boot/course/update/4?facultyId=3
+
+==============ENROLMENT=======================
+getAllEnrolment (GET): http://localhost:8080/api/spring-boot/enrolment
+
+getOneEnrolment (GET): http://localhost:8080/api/spring-boot/enrolment/get/6
+
+getEnrolmentByGradeGreaterThanEqual (GET): http://localhost:8080/api/spring-boot/enrolment/get/grade/6
+
+addEnrolment (POST): http://localhost:8080/api/spring-boot/enrolment/add/studentId/5/courseId/5
+    {
+        "grade": 10
+    }
+deleteEnrolment (DELETE): http://localhost:8080/api/spring-boot/enrolment/delete/7
+
+updateEnrolemnt (PUT):
+UPDATE ALL:       http://localhost:8080/api/spring-boot/enrolment/update/4?studentId=2&courseId=1
+UPDATE STUDENTID: http://localhost:8080/api/spring-boot/enrolment/update/4?studentId=2
+UPDATE COURSEID:  http://localhost:8080/api/spring-boot/enrolment/update/4?courseId=1
+
+=================LIBRARY_CARD==================
+getAllLibraryCard (GET):  http://localhost:8080/api/spring-boot/library
+
+addLibraryCard (POST): http://localhost:8080/api/spring-boot/library/add/studentId/15
+    {
+        "card_number": 1080
+    }
+
+deleteLibraryCard (DELETE): http://localhost:8080/api/spring-boot/library/delete/12
+
+updateLibraryCard (PUT): http://localhost:8080/api/spring-boot/library/update/5?card_number=1080
