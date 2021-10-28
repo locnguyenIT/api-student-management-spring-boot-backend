@@ -3,7 +3,7 @@
 
 ### Spring Boot ( 3 - Player)
 
-![spring-boot-3-player](https://user-images.githubusercontent.com/86077654/138086348-6cb23128-f9ec-4e20-9f36-0aac9006e7ac.png)
+![spring-boot](https://user-images.githubusercontent.com/86077654/139226058-c06aa669-458c-42d8-82fc-8e403b7d8ac2.png)
 
 ### Spring Data JPA
 
