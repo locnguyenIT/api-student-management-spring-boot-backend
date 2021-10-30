@@ -36,9 +36,8 @@ public class DbConfiguration {
             //INSERT Faculty
             Faculty faculty_1  = new Faculty("Information Technology") ;
             Faculty faculty_2  = new  Faculty("Business Administration") ;
-            Faculty faculty_3 = new Faculty("English Language");
 
-            facultyRepository.saveAll(List.of(faculty_1,faculty_2,faculty_3));
+            facultyRepository.saveAll(List.of(faculty_1,faculty_2));
 
             //INSERT Classroom
             Classroom classDCT1  = new Classroom("DCT1171",faculty_1);
@@ -47,10 +46,8 @@ public class DbConfiguration {
             Classroom classDKQ1  = new Classroom("DKQ1171",faculty_2);
             Classroom classDKQ2  = new Classroom("DKQ1172",faculty_2);
 
-            Classroom classDEL1  = new Classroom("DEL1171",faculty_3);
-            Classroom classDEL2  = new Classroom("DEL1172",faculty_3);
 
-            classroomRepository.saveAll(List.of(classDCT1,classDCT2,classDKQ1,classDKQ2,classDEL1,classDEL2));
+            classroomRepository.saveAll(List.of(classDCT1,classDCT2,classDKQ1,classDKQ2));
 
             //INSERT Student
             Student loc = new Student(
@@ -101,49 +98,21 @@ public class DbConfiguration {
                     "Vung Tau",
                     LocalDate.of(2000, Month.MAY, 07),
                     classDKQ2);
-            Student huy = new Student(
-                    "Nguyen Huy",
-                    "huy@gmail.com",
-                    "TPHCM",
-                    LocalDate.of(1998, Month.MARCH, 20),
-                    classDEL1);
-            Student hoang = new Student(
-                    "Nguyen Hoang",
-                    "hoang@gmail.com",
-                    "Ninh Thuan",
-                    LocalDate.of(2001, Month.MAY, 23),
-                    classDEL1);
-            Student phu = new Student(
-                    "Nguyen Hoang Phu",
-                    "phu@gmail.com",
-                    "Can Tho",
-                    LocalDate.of(1999, Month.MAY, 17),
-                    classDEL2);
-            Student nhat = new Student(
-                    "Nguyen Nhat",
-                    "Nhat@gmail.com",
-                    "Kien Giang",
-                    LocalDate.of(2001, Month.MAY, 23),
-                    classDEL2);
 
-            studentRepository.saveAll(List.of(loc,linh,bao,minh,han,nam,hien,phuc,huy,hoang,phu,nhat));
+            studentRepository.saveAll(List.of(loc,linh,bao,minh,han,nam,hien,phuc));
 
             //INSERT Library_card
             LibraryCard card_1 = new LibraryCard(loc,"1001");
             LibraryCard card_2 = new LibraryCard(nam,"1003");
-            LibraryCard card_3 = new LibraryCard(hoang,"1002");
-            LibraryCard card_4 = new LibraryCard(linh,"1010");
-            LibraryCard card_5 = new LibraryCard(huy,"1007");
-            LibraryCard card_6 = new LibraryCard(phu,"1004");
-            LibraryCard card_7 = new LibraryCard(hien,"1005");
-            LibraryCard card_8 = new LibraryCard(nhat,"1011");
-            LibraryCard card_9 = new LibraryCard(phuc,"1020");
-            LibraryCard card_10 = new LibraryCard(han,"1015");
-            LibraryCard card_11 = new LibraryCard(minh,"1030");
-            LibraryCard card_12 = new LibraryCard(bao,"1018");
+            LibraryCard card_3 = new LibraryCard(linh,"1010");
+            LibraryCard card_4 = new LibraryCard(hien,"1005");
+            LibraryCard card_5 = new LibraryCard(phuc,"1020");
+            LibraryCard card_6 = new LibraryCard(han,"1015");
+            LibraryCard card_7 = new LibraryCard(minh,"1030");
+            LibraryCard card_8 = new LibraryCard(bao,"1018");
 
 
-            libraryCardRepository.saveAll(List.of(card_1,card_2,card_3,card_4,card_5,card_6,card_7,card_8,card_9,card_10,card_11,card_12));
+            libraryCardRepository.saveAll(List.of(card_1,card_2,card_3,card_4,card_5,card_6,card_7,card_8));
 
             //INSERT Course
             Course course_1 = new Course("Kỹ thuật lập trình",faculty_1);
@@ -152,10 +121,7 @@ public class DbConfiguration {
             Course course_4 = new Course("Xác xuất thống kê",faculty_2);
             Course course_5 = new Course("Quản trị doanh nghiệp",faculty_2);
             Course course_6 = new Course("Kế hoạch kinh doanh",faculty_2);
-            Course course_7 = new Course("Tiếng anh thương mại",faculty_3);
-            Course course_8 = new Course("Thương mại quốc tế ",faculty_3);
-            Course course_9 = new Course("Tiếng anh du lịch ",faculty_3);
-            courseRepository.saveAll(List.of(course_1,course_2,course_3,course_4,course_5,course_6,course_7,course_8,course_9));
+            courseRepository.saveAll(List.of(course_1,course_2,course_3,course_4,course_5,course_6));
 
             //INSERT Enrolment
             Enrolment enrolment_1 = new Enrolment(loc,course_1,8) ;
@@ -164,13 +130,11 @@ public class DbConfiguration {
             Enrolment enrolment_4 = new Enrolment(loc,course_3,9) ;
             Enrolment enrolment_5 = new Enrolment(hien,course_4,7) ;
             Enrolment enrolment_6 = new Enrolment(phuc,course_6,6) ;
-            Enrolment enrolment_7 = new Enrolment(nam,course_5,8) ;
+            Enrolment enrolment_7 = new Enrolment(minh,course_3,8) ;
             Enrolment enrolment_8 = new Enrolment(nam,course_4,5) ;
-            Enrolment enrolment_9 = new Enrolment(hoang,course_7,7) ;
-            Enrolment enrolment_10 = new Enrolment(phuc,course_8,4) ;
-            Enrolment enrolment_11 = new Enrolment(nhat,course_9,10) ;
-            Enrolment enrolment_12 = new Enrolment(nhat,course_8,8) ;
-            enrolmentRepository.saveAll(List.of(enrolment_1, enrolment_2, enrolment_3, enrolment_4, enrolment_5, enrolment_6,enrolment_7,enrolment_8,enrolment_9,enrolment_10,enrolment_11,enrolment_12));
+            Enrolment enrolment_9 = new Enrolment(hien,course_5,7) ;
+            Enrolment enrolment_10 = new Enrolment(han,course_5,4) ;
+            enrolmentRepository.saveAll(List.of(enrolment_1, enrolment_2, enrolment_3, enrolment_4, enrolment_5, enrolment_6,enrolment_7,enrolment_8,enrolment_9,enrolment_10));
 
 
         };
