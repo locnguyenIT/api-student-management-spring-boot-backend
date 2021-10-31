@@ -11,7 +11,7 @@
 
 ### ER Diagram
 
-![db_ERD](https://user-images.githubusercontent.com/86077654/137906442-364339f9-f246-4bd0-8c9d-f00a6261021c.png)
+![student](https://user-images.githubusercontent.com/86077654/139568690-7f2b27bd-0c75-4017-b3b0-fbf82f404571.png)
 
 ### application.properties
 
