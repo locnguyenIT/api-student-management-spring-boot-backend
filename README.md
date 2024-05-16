@@ -13,10 +13,6 @@
 
 ![student](https://user-images.githubusercontent.com/86077654/139568690-7f2b27bd-0c75-4017-b3b0-fbf82f404571.png)
 
-### application.properties
-
-![properties](https://user-images.githubusercontent.com/86077654/137910033-4012bc3d-6e28-406b-8cc9-dfe826c790af.png)
-
 Go to project: api-spring-boot-student-management\src\main\resources\application.properties 
 
 Use MySQL to connect database with database name is "student".
